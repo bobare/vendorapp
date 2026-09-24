@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Vendor Center — Privacy Policy</title>
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1c1e21; --muted:#5b6169; --border:#e6e8eb;
+    --accent:#f68b1e; --card:#f8f9fa; --code:#eef0f2;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14161a; --fg:#eef0f2; --muted:#a3aab3;
+      --border:#2a2e34; --accent:#ffa347; --card:#1c1f24; --code:#20242a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14161a; --fg:#eef0f2; --muted:#a3aab3;
+    --border:#2a2e34; --accent:#ffa347; --card:#1c1f24; --code:#20242a;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top: env(safe-area-inset-top, 0px);}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  .wrap{max-width:820px; margin:0 auto; padding:40px 20px 80px;}
+  header{margin-bottom:32px;}
+  h1{font-size:1.9rem; margin:0 0 6px;}
+  .subtitle{color:var(--muted); font-size:0.95rem;}
+  .badge{
+    display:inline-block; background:var(--accent); color:#1c1e21;
+    font-weight:700; font-size:0.72rem; letter-spacing:.03em;
+    text-transform:uppercase; padding:3px 10px; border-radius:999px; margin-bottom:14px;
+  }
+  .callout{
+    background:var(--card); border:1px solid var(--border); border-radius:12px;
+    padding:16px 18px; margin:20px 0; font-size:0.95rem;
+  }
+  .callout.important{ border-left:4px solid var(--accent); }
+  h2{
+    font-size:1.25rem; margin-top:2.4em; padding-bottom:8px;
+    border-bottom:1px solid var(--border);
+  }
+  h3{font-size:1.02rem; margin-top:1.6em;}
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:0.92rem;}
+  th,td{text-align:left; padding:9px 10px; border-bottom:1px solid var(--border); vertical-align:top;}
+  th{color:var(--muted); font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:.02em;}
+  code{background:var(--code); padding:2px 6px; border-radius:5px; font-size:0.88em;}
+  .toc{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px 22px; margin:24px 0;}
+  .toc a{color:var(--fg); text-decoration:none;}
+  .toc a:hover{color:var(--accent);}
+  .toc ol{margin:6px 0 0; padding-left:1.2em;}
+  ul,ol{padding-left:1.3em;}
+  li{margin:4px 0;}
+  a{color:var(--accent);}
+  footer{
+    margin-top:60px; padding-top:20px; border-top:1px solid var(--border);
+    color:var(--muted); font-size:0.85rem;
+  }
+  .overflow{overflow-x:auto;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="badge">Privacy Policy</span>
+    <h1>Vendor Center — Privacy Policy</h1>
+    <p class="subtitle">Last updated: <strong id="last-updated">September 24, 2026</strong> &middot; Applies to the Android app "Vendor Center" (package <code>com.vendorapp.jumia</code>)</p>
+  </header>
+
+  <div class="callout important">
+    <strong>Independent, unofficial app.</strong> Vendor Center is built and
+    maintained by an independent individual developer. It is
+    <strong>not developed, operated, endorsed, or officially supported by
+    Jumia</strong> or any Jumia group company. It works only by connecting,
+    with your own credentials, to Jumia's publicly documented Vendor Center
+    API — the same API Jumia makes available to any vendor or third-party
+    developer who registers an application. "Jumia" and any related names
+    or logos referenced in this policy or in the app belong to their
+    respective owners and are used only to describe interoperability.
+  </div>
+
+  <div class="toc">
+    <strong>Contents</strong>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data-we-collect">Data the app collects and stores</a></li>
+      <li><a href="#data-we-dont">Data we do <em>not</em> collect</a></li>
+      <li><a href="#jumia-api">How your data is shared with Jumia's API</a></li>
+      <li><a href="#ads">Advertising (Google AdMob)</a></li>
+      <li><a href="#consent">Your consent choices (GDPR / UK / CCPA)</a></li>
+      <li><a href="#notifications">Notifications &amp; background order checks</a></li>
+      <li><a href="#permissions">Android permissions the app requests</a></li>
+      <li><a href="#retention">Data retention &amp; deletion</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#sharing">Who else can see your data</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#thirdparty">Third-party services used by the app</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
+
+  <h2 id="overview">1. Overview</h2>
+  <p>
+    Vendor Center is a companion app for people who run a shop on Jumia's
+    marketplace. It lets you view and manage <strong>your own</strong>
+    orders, products, account statements, and sales analytics from your
+    phone, by calling Jumia's Vendor Center API directly using
+    credentials <strong>you</strong> register with Jumia and enter into the
+    app yourself.
+  </p>
+  <p>
+    The app does not have its own servers or backend. There is no
+    developer-run database, and the developer does not receive, store, or
+    have visibility into your Jumia data, credentials, or orders. Every API
+    call the app makes goes directly from your device to Jumia's servers.
+  </p>
+
+  <h2 id="data-we-collect">2. Data the app collects and stores</h2>
+  <p>Everything below is stored <strong>only on your device</strong>, inside Android's <code>EncryptedSharedPreferences</code> (AES-256, keyed to the Android Keystore). None of it is transmitted to the developer.</p>
+  <div class="overflow">
+  <table>
+    <tr><th>Item</th><th>What it is</th><th>Why it's stored</th></tr>
+    <tr><td>Client ID &amp; Client Secret</td><td>The OAuth2 app credentials you generate yourself in Jumia's Vendor Center dashboard</td><td>Required to authenticate your app registration with Jumia</td></tr>
+    <tr><td>Access &amp; refresh tokens</td><td>OAuth2 tokens issued by Jumia after you log in</td><td>Lets the app call the Vendor Center API on your behalf without asking you to log in every time</td></tr>
+    <tr><td>Shop ID &amp; country/market code</td><td>Identifies which of your Jumia shop(s) to fetch data for</td><td>Required by the API to scope requests to your shop</td></tr>
+    <tr><td>API/auth base URLs</td><td>Which regional Jumia Vendor Center environment to call</td><td>Jumia operates market-specific endpoints</td></tr>
+    <tr><td>Cached orders, products, statements, analytics</td><td>Data fetched from Jumia's API for display and offline viewing</td><td>Lets screens load instantly and work briefly offline</td></tr>
+    <tr><td>App preferences</td><td>Theme choice, last-selected tab/filter, notification toggle</td><td>Convenience — remembers how you left the app</td></tr>
+  </table>
+  </div>
+  <p>
+    None of this is linked to a developer-side account, because there is
+    no developer-side account — the app has no sign-up or login system of
+    its own beyond the Jumia OAuth flow described above.
+  </p>
+
+  <h2 id="data-we-dont">3. Data we do <em>not</em> collect</h2>
+  <ul>
+    <li>No crash reporting or analytics SDK is included in the app (no Firebase Analytics/Crashlytics, no Mixpanel, no Amplitude, etc.)</li>
+    <li>No name, email, phone number, or payment information is collected by the app itself</li>
+    <li>No contacts, photos, microphone, camera, or precise (GPS) location access is requested</li>
+    <li>The developer cannot see your Jumia password — login happens in a Chrome Custom Tab on Jumia's own domain, and the app only ever receives an OAuth2 authorization code, never your password</li>
+  </ul>
+
+  <h2 id="jumia-api">4. How your data is shared with Jumia's API</h2>
+  <p>
+    Every screen in the app (Orders, Products, Account Statement,
+    Analytics) works by calling Jumia's publicly documented Vendor Center
+    REST API over HTTPS, directly from your device, using your own
+    access token. Jumia's handling of that data is governed by
+    <strong>Jumia's own privacy policy and terms</strong>, not this one —
+    please refer to Jumia's official privacy policy at
+    <a href="https://www.jumia.com" target="_blank" rel="noopener">jumia.com</a>
+    for how Jumia itself processes vendor and order data on its platform.
+  </p>
+
+  <h2 id="ads">5. Advertising (Google AdMob)</h2>
+  <p>
+    The app is monetized with <strong>Google AdMob</strong> banner,
+    interstitial, and app-open ads. To serve and measure ads, Google's
+    Mobile Ads SDK may collect and process:
+  </p>
+  <ul>
+    <li>Your advertising ID (a resettable, non-permanent device identifier — not your Google account or personal identity)</li>
+    <li>Coarse, IP-derived location (e.g. country/city level) for ad relevance and fraud prevention</li>
+    <li>Device and app information (device model, OS version, app version, language, time zone)</li>
+    <li>Ad interaction data (impressions, clicks, viewability) for billing and fraud detection</li>
+  </ul>
+  <p>
+    This data is collected and processed by Google, under
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>,
+    not by the app's developer. The developer receives only aggregated
+    revenue and performance reports from AdMob — never any data that
+    identifies you individually.
+  </p>
+  <p>
+    You can control ad personalization for your Google account at
+    <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>,
+    and reset or opt out of your device's advertising ID in your Android
+    system settings (<em>Settings → Privacy → Ads</em> or similar,
+    depending on your Android version).
+  </p>
+
+  <h2 id="consent">6. Your consent choices (GDPR / UK / CCPA)</h2>
+  <p>
+    If you're located in the European Economic Area, the UK, or
+    Switzerland, the app shows a consent form — built with Google's
+    <strong>User Messaging Platform (UMP)</strong> — the first time you
+    open it, before any ad request is made. Your choice (personalized
+    ads, non-personalized ads, or no ads where required) is respected for
+    every ad shown afterward.
+  </p>
+  <p>
+    You can review or change that choice at any time from inside the app:
+    open the navigation menu → <strong>Privacy Policy</strong> →
+    <strong>Ad privacy options</strong>.
+  </p>
+  <p>
+    If you're a California resident, Google's role as an ad-technology
+    provider and your choices around the sale/sharing of information for
+    advertising are described in Google's own
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>
+    and <a href="https://myadcenter.google.com" target="_blank" rel="noopener">Ad Center</a>.
+  </p>
+
+  <h2 id="notifications">7. Notifications &amp; background order checks</h2>
+  <p>
+    If you grant notification permission, the app periodically checks
+    Jumia's API in the background (using Android's WorkManager) for new
+    orders and shows a local notification when one arrives. This check
+    runs entirely on your device using your existing session token — no
+    separate push-notification server is involved, and no data leaves
+    your device to make this work beyond the same direct calls to Jumia's
+    API described in Section 4.
+  </p>
+
+  <h2 id="permissions">8. Android permissions the app requests</h2>
+  <div class="overflow">
+  <table>
+    <tr><th>Permission</th><th>Used for</th></tr>
+    <tr><td><code>INTERNET</code></td><td>Calling Jumia's API and loading ads</td></tr>
+    <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Detecting connectivity to retry failed requests sensibly</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td><td>Showing the "new order" notification described in Section 7 (Android 13+)</td></tr>
+    <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Re-scheduling the background order check after your device restarts</td></tr>
+    <tr><td><code>com.google.android.gms.permission.AD_ID</code></td><td>Lets the Google Mobile Ads SDK read the resettable advertising ID described in Section 5, subject to your consent choice</td></tr>
+  </table>
+  </div>
+
+  <h2 id="retention">9. Data retention &amp; deletion</h2>
+  <ul>
+    <li>Your credentials, tokens, and cached data stay on your device only, for as long as the app is installed.</li>
+    <li>Tapping <strong>Log out</strong> (Settings) clears your saved session and cached Jumia data from the app immediately.</li>
+    <li>Uninstalling the app removes all locally stored data, including the encrypted preferences store.</li>
+    <li>Revoking the app's access from your Jumia Vendor Center dashboard (Settings → Applications) immediately invalidates its tokens on Jumia's side, independent of anything the app does.</li>
+    <li>The developer holds no copy of your data to delete, because none is ever sent to the developer — there is nothing on a developer-controlled server to request deletion of.</li>
+  </ul>
+
+  <h2 id="security">10. Security</h2>
+  <ul>
+    <li>All network traffic to Jumia's API and to Google's ad services uses HTTPS/TLS.</li>
+    <li>Credentials and tokens are encrypted at rest with AES-256-GCM via Android's <code>EncryptedSharedPreferences</code>/Keystore, not stored in plain text.</li>
+    <li>Login uses the OAuth2 Authorization Code flow inside a Chrome Custom Tab — your Jumia password is typed only into Jumia's own login page, never into the app itself.</li>
+    <li>Cleartext (unencrypted HTTP) network traffic is disabled at the OS level for this app.</li>
+  </ul>
+
+  <h2 id="sharing">11. Who else can see your data</h2>
+  <p>Aside from Jumia (Section 4) and Google/AdMob (Section 5), your data is not sold, rented, or shared with any other third party. The app has no advertising networks, data brokers, or analytics vendors beyond the one disclosed above.</p>
+
+  <h2 id="children">12. Children's privacy</h2>
+  <p>Vendor Center is a business tool for people who operate a Jumia seller account, and Jumia requires vendors to be of legal age to enter into a commercial agreement in their country. The app is not directed at children, and the developer does not knowingly collect data from children.</p>
+
+  <h2 id="rights">13. Your rights</h2>
+  <p>Depending on where you live, you may have rights to access, correct, export, or delete your personal data, and to object to or restrict certain processing. Because:</p>
+  <ul>
+    <li>your Jumia account data is controlled by Jumia (contact Jumia directly, or use your Vendor Center dashboard), and</li>
+    <li>ad-related data is controlled by Google (use the links in Section 5), and</li>
+    <li>everything else lives only in encrypted storage on your own device (use Log out / uninstall, Section 9),</li>
+  </ul>
+  <p>there is no separate developer-held dataset for the developer to action a rights request against — but you're welcome to reach out (Section 15) with any question about how the app itself handles data, and it will be answered directly.</p>
+
+  <h2 id="thirdparty">14. Third-party services used by the app</h2>
+  <ul>
+    <li><strong>Jumia Vendor Center API</strong> — <a href="https://vendorcenter.jumia.com" target="_blank" rel="noopener">vendorcenter.jumia.com</a> (your order/product/shop data)</li>
+    <li><strong>Google AdMob &amp; User Messaging Platform</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> (ad serving and consent)</li>
+    <li><strong>Google Play services</strong> — underlying platform services Android apps rely on generally</li>
+  </ul>
+
+  <h2 id="changes">15. Changes to this policy</h2>
+  <p>
+    If this policy changes, the "Last updated" date at the top of this
+    page will change accordingly, and material changes will be reflected
+    here before they take effect. Since this page is the single source of
+    truth referenced from inside the app, checking here is the way to see
+    the current version at any time.
+  </p>
+
+  <h2 id="contact">16. Contact</h2>
+  <p>
+    Questions about this policy or how the app works can be sent to:
+    <strong>&lt;add your contact email here&gt;</strong>
+    (edit this line before publishing — GitHub Pages will not fill this in
+    for you).
+  </p>
+
+  <footer>
+    Vendor Center is an independent, unofficial companion app for Jumia
+    sellers and is not affiliated with, endorsed by, or sponsored by
+    Jumia. This page is published by the app's developer at
+    <code>bobare.github.io/vendorapp</code>.
+  </footer>
+
+</div>
+</body>
+</html>
