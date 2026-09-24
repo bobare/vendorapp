@@ -1,0 +1,2 @@
+# vendorapp
+Jumia VC privacy
