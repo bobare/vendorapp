@@ -71,7 +71,7 @@
   <header>
     <span class="badge">Privacy Policy</span>
     <h1>Vendor Center — Privacy Policy</h1>
-    <p class="subtitle">Last updated: <strong id="last-updated">September 24, 2026</strong> &middot; Applies to the Android app "Vendor Center" (package <code>com.vendorapp.jumia</code>)</p>
+    <p class="subtitle">Last updated: <strong id="last-updated">October 2, 2026</strong> &middot; Applies to the Android app "Vendor Center" (package <code>com.vendorapp.jumia</code>)</p>
   </header>
 
   <div class="callout important">
@@ -93,7 +93,7 @@
       <li><a href="#data-we-collect">Data the app collects and stores</a></li>
       <li><a href="#data-we-dont">Data we do <em>not</em> collect</a></li>
       <li><a href="#jumia-api">How your data is shared with Jumia's API</a></li>
-      <li><a href="#ads">Advertising (Google AdMob)</a></li>
+      <li><a href="#ads">Advertising &amp; analytics (Google AdMob &amp; Firebase Analytics)</a></li>
       <li><a href="#consent">Your consent choices (GDPR / UK / CCPA)</a></li>
       <li><a href="#notifications">Notifications &amp; background order checks</a></li>
       <li><a href="#permissions">Android permissions the app requests</a></li>
@@ -145,8 +145,8 @@
 
   <h2 id="data-we-dont">3. Data we do <em>not</em> collect</h2>
   <ul>
-    <li>No crash reporting or analytics SDK is included in the app (no Firebase Analytics/Crashlytics, no Mixpanel, no Amplitude, etc.)</li>
-    <li>No name, email, phone number, or payment information is collected by the app itself</li>
+    <li>No crash reporting SDK is included (no Crashlytics, no third-party crash tool) - Firebase Analytics is used for app-usage analytics only (Section 5), not crash reporting, and no analytics tool beyond it (no Mixpanel, no Amplitude, etc.)</li>
+    <li>No name, phone number, or payment information is collected by the app itself. Your Jumia account email is shown to you in the app's own navigation drawer (fetched from Jumia's API so you can confirm which account you're logged into) but is not sent to Google, included in any analytics event, or seen by the developer</li>
     <li>No contacts, photos, microphone, camera, or precise (GPS) location access is requested</li>
     <li>The developer cannot see your Jumia password — login happens in a Chrome Custom Tab on Jumia's own domain, and the app only ever receives an OAuth2 authorization code, never your password</li>
   </ul>
@@ -163,24 +163,35 @@
     for how Jumia itself processes vendor and order data on its platform.
   </p>
 
-  <h2 id="ads">5. Advertising (Google AdMob)</h2>
+  <h2 id="ads">5. Advertising &amp; analytics (Google AdMob &amp; Firebase Analytics)</h2>
   <p>
     The app is monetized with <strong>Google AdMob</strong> banner,
-    interstitial, and app-open ads. To serve and measure ads, Google's
-    Mobile Ads SDK may collect and process:
+    interstitial, and app-open ads, and uses <strong>Firebase Analytics</strong>
+    (also a Google product) to understand overall app usage - things like
+    which screens are opened and whether an update (order action, price
+    change) succeeded, so the developer can tell what's actually used and
+    where something is breaking. To serve and measure ads, and to record
+    analytics events, these Google SDKs may collect and process:
   </p>
   <ul>
     <li>Your advertising ID (a resettable, non-permanent device identifier — not your Google account or personal identity)</li>
     <li>Coarse, IP-derived location (e.g. country/city level) for ad relevance and fraud prevention</li>
     <li>Device and app information (device model, OS version, app version, language, time zone)</li>
     <li>Ad interaction data (impressions, clicks, viewability) for billing and fraud detection</li>
+    <li>App usage events (e.g. "viewed Orders", "updated a price", "switched shop") with no order contents, customer details, or financial figures attached - see the next section for exactly what is deliberately excluded</li>
   </ul>
   <p>
     This data is collected and processed by Google, under
     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>,
-    not by the app's developer. The developer receives only aggregated
-    revenue and performance reports from AdMob — never any data that
-    identifies you individually.
+    not by the app's developer. For ads, the developer receives only
+    aggregated revenue and performance reports from AdMob; for analytics,
+    the developer receives only aggregated usage reports from Firebase -
+    neither ever identifies you individually.
+  </p>
+  <p>
+    Analytics collection is held off by default and only switches on once
+    your consent choice (Section 6) resolves - the same choice governs both
+    ads and analytics, rather than asking twice.
   </p>
   <p>
     You can control ad personalization for your Google account at
@@ -253,7 +264,7 @@
   </ul>
 
   <h2 id="sharing">11. Who else can see your data</h2>
-  <p>Aside from Jumia (Section 4) and Google/AdMob (Section 5), your data is not sold, rented, or shared with any other third party. The app has no advertising networks, data brokers, or analytics vendors beyond the one disclosed above.</p>
+  <p>Aside from Jumia (Section 4) and Google/AdMob/Firebase Analytics (Section 5), your data is not sold, rented, or shared with any other third party. The app has no advertising networks, data brokers, or analytics vendors beyond the ones disclosed above.</p>
 
   <h2 id="children">12. Children's privacy</h2>
   <p>Vendor Center is a business tool for people who operate a Jumia seller account, and Jumia requires vendors to be of legal age to enter into a commercial agreement in their country. The app is not directed at children, and the developer does not knowingly collect data from children.</p>
@@ -270,7 +281,7 @@
   <h2 id="thirdparty">14. Third-party services used by the app</h2>
   <ul>
     <li><strong>Jumia Vendor Center API</strong> — <a href="https://vendorcenter.jumia.com" target="_blank" rel="noopener">vendorcenter.jumia.com</a> (your order/product/shop data)</li>
-    <li><strong>Google AdMob &amp; User Messaging Platform</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> (ad serving and consent)</li>
+    <li><strong>Google AdMob, Firebase Analytics &amp; User Messaging Platform</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> (ad serving, usage analytics, and consent)</li>
     <li><strong>Google Play services</strong> — underlying platform services Android apps rely on generally</li>
   </ul>
 
@@ -286,7 +297,9 @@
   <h2 id="contact">16. Contact</h2>
   <p>
     Questions about this policy or how the app works can be sent to:
-    <strong>krystalgraphix@gmail.com</strong>.
+    <strong>&lt;add your contact email here&gt;</strong>
+    (edit this line before publishing — GitHub Pages will not fill this in
+    for you).
   </p>
 
   <footer>
